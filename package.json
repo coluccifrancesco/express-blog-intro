@@ -22,5 +22,7 @@
     "chalk": "^5.4.1",
     "dotenv": "^16.6.0",
     "express": "^5.1.0"
-  }
+  },
+  
+  "type": "module"
 }
