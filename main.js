@@ -19,31 +19,31 @@ const posts = [
     {
         title: "Ciambellone",
         contenuto: "Un dolce semplice e gustoso, perfetto per la colazione.",
-        image: "./images/ciambellone.jpeg",
+        image: `http://localhost:${port}/imgs/ciambellone.jpeg`,
         tags: ["dolce", "colazione", "ciambella"]
     },
     {
         title: "Cracker alla barbabietola",
         contenuto: "Snack salato e croccante, ideale per un aperitivo.",
-        image: "./images/cracker_barbabietola.jpeg",
+        image: `http://localhost:${port}/imgs/cracker_barbabietola.jpeg`,
         tags: ["snack", "aperitivo", "barbabietola"]
     },
     {
         title: "Pane fritto dolce",
         contenuto: "Un pane dolce e fritto, perfetto per una merenda golosa.",
-        image: "./images/pane_fritto_dolce.jpeg",
+        image: `http://localhost:${port}/imgs/pane_fritto_dolce.jpeg`,
         tags: ["dolce", "merenda", "fritto"]
     },
     {
         title: "Pasta alla barbabietola",
         contenuto: "Un primo piatto colorato e saporito, con un tocco di barbabietola.",
-        image: "./images/pasta_barbabietola.jpeg",
+        image: `http://localhost:${port}/imgs/pasta_barbabietola.jpeg`,
         tags: ["primo", "barbabietola", "pasta"]
     },
     {
         title: "Torta paesana",
         contenuto: "Un dolce tradizionale, ricco di sapori e storia.",
-        image: "./images/torta_paesana.jpeg",
+        image: `http://localhost:${port}/imgs/torta_paesana.jpeg`,
         tags: ["dolce", "tradizionale", "torta"]
     }
 ]
@@ -57,7 +57,7 @@ app.get(('/api/posts'), (req, res) => {
 
 // Configuriamo gli asset statici sull’applicazione in modo che si possano visualizzare 
 // le immagini associate ad ogni post.
-
+app.use(express.static('public'))
 
 
 
